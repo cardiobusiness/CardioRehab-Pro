@@ -1,0 +1,22 @@
+{
+  "name": "@cardiorehab/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@cardiorehab/clinical-core": "0.1.0",
+    "@supabase/supabase-js": "^2.49.0",
+    "fastify": "^5.0.0",
+    "pdfkit": "^0.15.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.0"
+  }
+}
+

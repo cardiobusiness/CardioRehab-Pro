@@ -1,0 +1,31 @@
+{
+  "name": "cardiorehab-pro",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plataforma clinica para fisioterapia cardiovascular e reabilitacao cardiaca.",
+  "workspaces": [
+    "apps/mobile",
+    "services/api",
+    "packages/clinical-core"
+  ],
+  "scripts": {
+    "dev": "concurrently -n API,MOBILE -c blue,green \"npm run dev:api\" \"npm run dev:mobile\"",
+    "dev:api": "cross-env PORT=3334 npm run dev --workspace @cardiorehab/api",
+    "dev:mobile": "npm run dev --workspace @cardiorehab/mobile -- --port 8082",
+    "android": "node scripts/android.cjs",
+    "android:doctor": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/android.ps1 -Mode Doctor",
+    "android:configure": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/android.ps1 -Mode Configure",
+    "android:build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/android.ps1 -Mode Build",
+    "android:emulator": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/android.ps1 -Mode Emulator",
+    "ios": "npm run ios --workspace @cardiorehab/mobile",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "cross-env": "^7.0.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

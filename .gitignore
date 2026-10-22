@@ -1,0 +1,15 @@
+node_modules/
+.native-template/
+dist/
+build/
+.expo/
+.metro/
+.env
+.env.*
+*.log
+coverage/
+apps/mobile/android/local.properties
+apps/mobile/android/.gradle/
+apps/mobile/android/.cxx/
+apps/mobile/android/app/.cxx/
+.dev-logs/

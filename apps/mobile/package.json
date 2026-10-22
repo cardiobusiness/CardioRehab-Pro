@@ -1,0 +1,38 @@
+{
+  "name": "@cardiorehab/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "react-native start --host 0.0.0.0",
+    "start": "react-native start --host 0.0.0.0",
+    "android": "react-native run-android --port 8082",
+    "ios": "react-native run-ios --port 8082",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "@cardiorehab/clinical-core": "0.1.0",
+    "@react-navigation/native": "^7.0.0",
+    "@react-navigation/native-stack": "^7.0.0",
+    "base64-js": "1.5.1",
+    "react": "19.1.1",
+    "react-native": "^0.82.0",
+    "react-native-ble-plx": "3.5.1",
+    "react-native-safe-area-context": "^5.5.0",
+    "react-native-screens": "^4.18.0",
+    "react-native-svg": "^15.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/runtime": "^7.25.0",
+    "@react-native-community/cli": "^20.0.0",
+    "@react-native-community/cli-platform-android": "^20.0.0",
+    "@react-native-community/cli-platform-ios": "^20.0.0",
+    "@react-native/babel-preset": "^0.82.0",
+    "@react-native/metro-config": "^0.82.0",
+    "@types/react": "^19.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.7.0"
+  }
+}
